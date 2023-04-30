@@ -12,12 +12,31 @@
 	align-self: flex-start;
 }
 
+.input {
+	padding: 4px;
+
+	border: none;
+	border-radius: 4px;
+
+	background: #d7373c;
+	box-shadow: inset 17px 17px 34px #9f292c, inset -17px -17px 34px #ff454c;
+
+	&:active {
+		outline: 2px solid lightskyblue;
+	}
+}
+
 .pointNumber {
 	text-align: right;
+
+	border-radius: 8px;
+	background: none;
+	box-shadow: none;
 }
 .success {
 }
 .playerNumber {
 }
 .reason {
+	color: #fefefe;
 }

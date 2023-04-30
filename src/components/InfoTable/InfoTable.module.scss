@@ -1,20 +1,33 @@
 .InfoTable {
 	display: grid;
-	grid-template-columns: 32px 32px 1fr 1.5fr;
+	grid-template-columns: 32px 32px 0.2fr 2fr;
 
 	gap: 10px;
 
-	& > * {
-		padding: 0;
-		margin: 0;
-	}
-}
+	// & > * {
+	// 	padding: 0;
+	// 	margin: 0;
+	// }
 
-.InfoTitle {
+	margin: 12px 24px;
+	padding: 12px 24px;
+	border-radius: 0 8px;
+
+	border-radius: 8px;
+	background: linear-gradient(145deg, #c23236, #e63b40);
+	box-shadow: 17px 17px 34px #9f292c, -17px -17px 34px #ff454c;
 }
 
 .InfoControl {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 12px;
+
+	margin: 12px 24px;
+	padding: 12px 24px;
+	border-radius: 0 0 8px 8px;
+
+	border-radius: 8px;
+	background: linear-gradient(145deg, #c23236, #e63b40);
+	box-shadow: 17px 17px 34px #9f292c, -17px -17px 34px #ff454c;
 }

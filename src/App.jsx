@@ -5,7 +5,7 @@ import styles from "./App.module.scss";
 function App() {
 	return (
 		<div className={styles.app}>
-			<h1 className={styles.app__title}>Round Breakdown</h1>
+			<h1 className={styles.app__title}>Volleyball Round Breakdown</h1>
 			<InfoTable />
 		</div>
 	);
