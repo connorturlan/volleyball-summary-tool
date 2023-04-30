@@ -7,6 +7,7 @@ function App() {
 		<div className={styles.app}>
 			<h1 className={styles.app__title}>Volleyball Round Breakdown</h1>
 			<InfoTable />
+			<p className={styles.app__notice}>Made by Connor Turlan - 2023</p>
 		</div>
 	);
 }
