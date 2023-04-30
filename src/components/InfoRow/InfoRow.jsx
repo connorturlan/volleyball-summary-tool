@@ -11,7 +11,7 @@ function InfoRow({ obj, allReasons }) {
 	));
 
 	return (
-		<div className={styles.InfoRow}>
+		<>
 			<label className={styles.pointNumber}>{obj.id}</label>
 			<input
 				onChange={handleChange}
@@ -31,7 +31,7 @@ function InfoRow({ obj, allReasons }) {
 				</option>
 				{options}
 			</select>
-		</div>
+		</>
 	);
 }
 

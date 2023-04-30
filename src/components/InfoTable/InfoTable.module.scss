@@ -1,9 +1,6 @@
 .InfoTable {
-}
-
-.InfoTitle {
 	display: grid;
-	grid-template-columns: 32px 32px 160px 240px;
+	grid-template-columns: 32px 32px 1fr 1.5fr;
 
 	gap: 10px;
 
@@ -13,5 +10,11 @@
 	}
 }
 
+.InfoTitle {
+}
+
 .InfoControl {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
 }

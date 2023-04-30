@@ -49,7 +49,8 @@ function InfoTable(props) {
 	};
 
 	const resetTable = () => {
-		setChildren([{ ...templateRow }]);
+		if (confirm("Are you sure you want to reset the table?"))
+			setChildren([{ ...templateRow }]);
 	};
 
 	const children = childRows.map((row) => (
@@ -64,13 +65,13 @@ function InfoTable(props) {
 				<button onClick={resetTable}>Reset</button>
 				<button onClick={addReason}>Add New Reason</button>
 			</section>
-			<section className={styles.InfoTitle}>
-				<h3>#</h3>
-				<h3>win</h3>
-				<h3>player #</h3>
-				<h3>reason</h3>
+			<section className={styles.InfoTable}>
+				<h3 className={styles.InfoTitle}>#</h3>
+				<h3 className={styles.InfoTitle}>win</h3>
+				<h3 className={styles.InfoTitle}>player #</h3>
+				<h3 className={styles.InfoTitle}>reason</h3>
+				{children}
 			</section>
-			<section className={styles.InfoTable}>{children}</section>
 		</>
 	);
 }
