@@ -8,11 +8,11 @@ function InfoRow({ obj }) {
 
 	return (
 		<div className={styles.InfoRow}>
-			<label>{obj.id}</label>
+			<label className={styles.pointNumber}>{obj.id}</label>
 			<input
 				onChange={handleChange}
 				id="success"
-				type="text"
+				type="checkbox"
 				className={styles.success}
 			/>
 			<input
@@ -26,6 +26,9 @@ function InfoRow({ obj }) {
 				onChange={handleChange}
 				className={styles.reason}
 			>
+				<option value="-1" defaultChecked>
+					...
+				</option>
 				<option value="0">Miss-pass</option>
 				<option value="1">Serve Ace</option>
 				<option value="2">Serve Fault</option>
