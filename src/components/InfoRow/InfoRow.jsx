@@ -1,46 +1,35 @@
+import { useState } from "react";
 import styles from "./InfoRow.module.scss";
 
-function InfoRow({ obj }) {
+function InfoRow({ obj, allReasons }) {
 	const handleChange = (e) => {
 		const target = e.target.id;
 		obj[target] = e.target.value;
 	};
+	const options = allReasons.map((reason, i) => (
+		<option value={`${i}:${reason}`}>{reason}</option>
+	));
 
 	return (
 		<div className={styles.InfoRow}>
 			<label className={styles.pointNumber}>{obj.id}</label>
 			<input
 				onChange={handleChange}
-				id="success"
+				id="win"
 				type="checkbox"
 				className={styles.success}
 			/>
 			<input
 				onChange={handleChange}
-				id="number"
+				id="pn"
 				type="number"
 				className={styles.playerNumber}
 			/>
-			<select
-				id="reason"
-				onChange={handleChange}
-				className={styles.reason}
-			>
+			<select id="r" onChange={handleChange} className={styles.reason}>
 				<option value="-1" defaultChecked>
 					...
 				</option>
-				<option value="0">Miss-pass</option>
-				<option value="1">Serve Ace</option>
-				<option value="2">Serve Fault</option>
-				<option value="3">Serve Out</option>
-				<option value="4">Downball</option>
-				<option value="5">Campfire</option>
-				<option value="6">Double Touch</option>
-				<option value="7">Four Touches</option>
-				<option value="8">Net Fault</option>
-				<option value="9">Foot Fault</option>
-				<option value="10">Attack Fault</option>
-				<option value="11">Rotation Fault</option>
+				{options}
 			</select>
 		</div>
 	);
